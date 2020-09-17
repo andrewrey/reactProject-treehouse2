@@ -2,7 +2,7 @@
 Continuation of the TeamTreehouse React Course building the Scoreboard application with create-react-app
 
 **TeamTreeHouse Scoreboard: React Components**
-This course is a continuation from the previous TeamTreeHouse React Basics course. It continues to cover the following projects, but this time uses the Create-React-App to build the scoreboard.
+This course is a continuation from the previous TeamTreeHouse React Basics course. It continues to cover the following topics, but this time uses the Create-React-App to build the scoreboard.
 
  1. Props
  2. State
