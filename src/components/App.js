@@ -8,18 +8,22 @@ class App extends Component {
       {
         name: "Guil",
         id: 1,
+        score: 0,
       },
       {
         name: "Treasure",
         id: 2,
+        score: 0,
       },
       {
         name: "Ashley",
         id: 3,
+        score: 0,
       },
       {
         name: "James",
         id: 4,
+        score: 0,
       },
     ],
   };
@@ -39,7 +43,7 @@ class App extends Component {
 
         {/* Players list */}
         {this.state.players.map((player) => (
-          <Player name={player.name} id={player.id} key={player.id.toString()} removePlayer={this.handleRemovePlayer} />
+          <Player name={player.name} id={player.id} score={player.score} key={player.id.toString()} removePlayer={this.handleRemovePlayer} />
         ))}
       </div>
     );
