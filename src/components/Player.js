@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "./Counter";
 
-const Player = ({ name, id, score, removePlayer }) => {
+const Player = ({ name, id, score, removePlayer, updateScore, index }) => {
   return (
     <div className="player">
       <span className="player-name">
@@ -11,7 +11,7 @@ const Player = ({ name, id, score, removePlayer }) => {
         {name}
       </span>
 
-      <Counter score={score} />
+      <Counter score={score} updateScore={updateScore} index={index} />
     </div>
   );
 };
