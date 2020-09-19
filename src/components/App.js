@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Player from "./Player";
+import AddPlayerForm from "./AddPlayerForm";
 
 class App extends Component {
   state = {
@@ -61,6 +62,7 @@ class App extends Component {
         {players.map((player, index) => (
           <Player name={player.name} id={player.id} score={player.score} key={player.id.toString()} removePlayer={this.handleRemovePlayer} updateScore={this.handleScoreChange} index={index} />
         ))}
+        <AddPlayerForm />
       </div>
     );
   }
