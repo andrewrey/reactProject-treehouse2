@@ -28,6 +28,7 @@ class App extends Component {
       },
     ],
   };
+  prevPlayerId = 4;
 
   handleRemovePlayer = (id) => {
     this.setState((prevState) => {
@@ -35,6 +36,10 @@ class App extends Component {
         players: prevState.players.filter((p) => p.id !== id),
       };
     });
+  };
+
+  handleAddPlayer = (name) => {
+    this.setState((prevState) => ({ players: [...prevState.players, { name, id: (this.prevPlayerId += 1), score: 0 }] }));
   };
 
   // This creates new score state, but updates the score of the element because of referenced object on the heap stack
@@ -62,7 +67,7 @@ class App extends Component {
         {players.map((player, index) => (
           <Player name={player.name} id={player.id} score={player.score} key={player.id.toString()} removePlayer={this.handleRemovePlayer} updateScore={this.handleScoreChange} index={index} />
         ))}
-        <AddPlayerForm />
+        <AddPlayerForm addPlayer={this.handleAddPlayer} />
       </div>
     );
   }
