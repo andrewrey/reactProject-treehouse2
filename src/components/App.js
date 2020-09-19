@@ -36,13 +36,22 @@ class App extends Component {
     });
   };
 
+  // This creates new score state, but updates the score of the element because of referenced object on the heap stack
   handleScoreChange = (index, delta) => {
     this.setState((prevState) => ({
       score: (prevState.players[index].score += delta),
     }));
   };
 
+  // This way just updates the player state with new score each time without adding a score state.
+  // handleScoreChange = (index, delta) => {
+  //   this.setState((prevState) => ({
+  //     players: prevState.players.map((p, i) => (i === index ? { ...p, score: p.score + delta } : p)),
+  //   }));
+  // };
+
   render() {
+    console.log(this.state);
     let { players } = this.state;
     return (
       <div className="scoreboard">
