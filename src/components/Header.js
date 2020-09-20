@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Stats from "./Stats";
 import Stopwatch from "./Stopwatch";
 
@@ -12,4 +13,8 @@ const Header = ({ players, title }) => {
   );
 };
 
+Header.propTypes = {
+  players: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string,
+};
 export default Header;
