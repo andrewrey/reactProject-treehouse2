@@ -57,11 +57,10 @@ class App extends Component {
   // };
 
   render() {
-    console.log(this.state, "haha");
     let { players } = this.state;
     return (
       <div className="scoreboard">
-        <Header title="Scoreboard" players={players} />
+        <Header players={players} />
 
         {/* Players list */}
         {players.map((player, index) => (
